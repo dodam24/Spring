@@ -1,5 +1,10 @@
 package sample03;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("messageBean")
+@Scope("prototype")
 public class MessageBeanKo implements MessageBean {
 	private int num; //필드, 초기화
 	
