@@ -1,11 +1,19 @@
 package spring.conf;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import sample01.MessageBeanImpl;
 import sample02.CalcAdd;
 import sample02.CalcMul;
+import sample04.SungJukDTO2;
+import sample04.SungJukDelete;
+import sample04.SungJukInput;
+import sample04.SungJukOutput;
+import sample04.SungJukUpdate;
 
 @Configuration
 public class SpringConfiguration {
@@ -31,8 +39,15 @@ public class SpringConfiguration {
 	public CalcMul getCalcMul() {
 		return new CalcMul();
 	}
-	
+
+	//sample04
+	@Bean
+	//public ArrayList<SungJukDTO2> arrayList() { //자식으로 직접 가는 것보다 부모로 가는 것을 더 선호 (스프링은 인터페이스 기준이므로) 
+	public List<SungJukDTO2> arrayList() {	
+		return new ArrayList<SungJukDTO2>();
+	}
 }
+
 
 /*
 @Bean

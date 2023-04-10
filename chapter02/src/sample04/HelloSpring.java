@@ -49,7 +49,7 @@ public class HelloSpring { //클래스를 생성해야 menu() 함수 호출 가�
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		HelloSpring helloSpring = (HelloSpring) context.getBean("helloSpring");
 		helloSpring.menu(context); //context(지역변수)값을 menu()함수에 전달
-		System.out.println("프로그램을 종료합니다.");
+		//System.out.println("프로그램을 종료합니다.");
 	}	
 	
 }

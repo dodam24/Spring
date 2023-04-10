@@ -52,6 +52,26 @@
 		<property name="list" ref="arrayList"></property>
 	</bean>
 
+	<bean id="sungJukUpdate" class="sample04.SungJukUpdate">
+		<property name="list" ref="arrayList"></property>
+	</bean>
+
+	<bean id="sungJukDelete" class="sample04.SungJukDelete">
+		<property name="list" ref="arrayList"></property>
+	</bean>
+
 	<bean id="sungJukDTO2" class="sample04.SungJukDTO2" scope="prototype"/> <!-- prototype 걸어서 싱글톤을 깨야 다음 데이터가 들어올 수 있다. -->
 	
+	<!-- sample05 -->
+	
+	<bean id="messageBeanImpl2" class="sample05.MessageBeanImpl">
+		<constructor-arg value="홍길동"/>
+		<property name="phone" value="010-1234-5678"/>
+		<property name="outputter" ref="fileOutputter"/> <!-- 객체는 value가 아닌 ref -->
+	</bean>
+
+	<bean id="fileOutputter" class="sample05.FileOutputter">
+		<property name="filePath" value="D:/Spring/" />
+		<property name="fileName" value="result.txt" />
+	</bean>
 </beans>
