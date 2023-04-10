@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 5 packages to &apos;chapter05_SpringMaven/src&apos;&#x0D;&#x0A;- Original project: &apos;chapter05&apos;&#x0D;&#x0A;- Destination element: &apos;chapter05_SpringMaven/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     chapter05/src/spring&#x0D;&#x0A;     chapter05/src/user.service&#x0D;&#x0A;     chapter05/src/user.bean&#x0D;&#x0A;     chapter05/src/user.dao&#x0D;&#x0A;     chapter05/src/user.main" description="Copy packages" destination="=chapter05_SpringMaven/src=/optional=/true=/=/maven.pomderived=/true=/" element1="/src&lt;spring" element2="/src&lt;user.service" element3="/src&lt;user.bean" element4="/src&lt;user.dao" element5="/src&lt;user.main" flags="589830" fragments="5" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1681108504690" version="1.0"/>
+</session>

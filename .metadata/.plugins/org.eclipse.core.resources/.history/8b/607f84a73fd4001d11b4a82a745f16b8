@@ -1,0 +1,44 @@
+package sample04;
+
+import java.util.Scanner;
+
+public class HelloSpring {
+	public static void main(String[] args) {
+		
+	
+	//menu() 작성 - 5번 입력할 때까지 무한루프
+	public void menu() {
+		Scanner scan = new Scanner(System.in);
+		SungJuk sunkJuk = null;
+		int num;
+		
+		while(true) {
+			System.out.println();
+			System.out.println("**************");
+			System.out.println("   1. 입력");
+			System.out.println("   2. 출력");
+			System.out.println("   3. 수정");
+			System.out.println("   4. 삭제");
+			System.out.println("   5. 끝");
+			System.out.println("**************");
+			System.out.print("번호 입력 : ");
+			num = scan.nextInt();
+			if(num == 5) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
+			if(num == 1) {
+				sungJuk = new SungJukInput(); 
+			}else if(num == 2) {
+				sungJuk = new SungJukOutput();
+			}else if(num == 3 ) {
+				sungJuk = new SungJukUpdate();
+			}else if(num == 4) {
+				sungJuk = new SungJukDelete();
+			}
+			
+			sungJuk.execute();
+		}
+	}
+	}
+}

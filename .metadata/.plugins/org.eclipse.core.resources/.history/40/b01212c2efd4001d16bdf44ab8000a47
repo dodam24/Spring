@@ -1,0 +1,11 @@
+package sample05;
+
+public class FileOutputter implements Outputter {
+
+	@Override
+	public void output(String message) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,14 @@
+package user.service;
+
+public class UserUpdateService implements UserService {
+
+	@Override
+	public void execute() {
+		수정 할 아이디 입력 : angetl
+		찾고자 하는 아이디가 없습니다.
+		
+		수정 할 아이디 입력 : hong
+
+	}
+
+}

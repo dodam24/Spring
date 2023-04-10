@@ -1,0 +1,39 @@
+package sample03;
+
+public class SungJukImpl implements SungJuk {
+	private SungJukDTO sungJukDTO = null; //SungJukDTO를 가져오기
+	
+
+	public SungJukImpl(SungJukDTO sungJukDTO) { //Constructor Injection 이용
+		this.sungJukDTO = sungJukDTO;
+	}
+
+	@Override
+	public void calcTot() {
+		 sungJukDTO.setTot(sungJukDTO.getKor() + sungJukDTO.getEng() + sungJukDTO.getMath());
+
+	}
+
+	@Override
+	public void calcAvg() {
+		sungJukDTO.setAvg(sungJukDTO.getTot() / 3.);
+
+	}
+
+	@Override
+	public void display() {
+		System.out.println(sungJukDTO.getName() + "\t"
+						 + sungJukDTO.getKor() + "\t"
+						 + sungJukDTO.getEng() + "\t"
+						 + sungJukDTO.getTot() + "\t"
+						 + String.format("%.3f", sungJukDTO.getAvg()));
+
+	}
+
+	@Override
+	public void modify() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

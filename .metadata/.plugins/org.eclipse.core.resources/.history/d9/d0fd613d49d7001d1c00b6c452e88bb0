@@ -1,0 +1,14 @@
+package spring.conf;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource
+public class SpringConfiguration {
+
+}
+
+//SpringConfiguration은 일반 자바 파일이 아님
+//applicationContext.xml과 같은 환경설정 파일이다.
+

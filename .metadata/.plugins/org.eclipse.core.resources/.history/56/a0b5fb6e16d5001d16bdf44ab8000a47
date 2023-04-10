@@ -1,0 +1,19 @@
+package user.dao;
+
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import user.bean.UserDTO;
+
+public class UserDAOImpl implements UserDAO {
+
+	public void write(UserDTO userDTO) {
+		private JdbcTemplate jdbcTemplate = null;
+		
+		@Override
+		public void write(UserDTO userDTO) {
+			
+		}
+		
+	}
+
+}

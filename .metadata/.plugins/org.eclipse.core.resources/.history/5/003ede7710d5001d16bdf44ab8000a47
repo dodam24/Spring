@@ -1,0 +1,6 @@
+package user.dao;
+
+public interface UserDAO {
+
+	public void write(UserDTO userDTO);
+}

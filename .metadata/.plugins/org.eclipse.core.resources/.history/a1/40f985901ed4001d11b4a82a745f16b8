@@ -1,0 +1,42 @@
+package sample03;
+
+public class SungJukImpl implements SungJuk {
+	private SungJukDTO sungJukDTO = null;
+	
+
+	public SungJukImpl(SungJukDTO sungJukDTO) { //Constructor 이용
+		super();
+		this.sungJukDTO = sungJukDTO;
+	}
+
+	@Override
+	public void calcTot() {
+		tot = kor + eng + math;
+
+	}
+
+	@Override
+	public void calcAvg() {
+		avg = (double)tot / 3;
+
+	}
+
+	@Override
+	public void display() {
+		System.out.println("이름 \t국어 \t영어 \t수학 \t총점 \t평균");
+		System.out.println(name + "\t" 
+						 + kor + "\t"
+						 + eng + "\t"
+						 + math + "\t"
+						 + tot + "\t"
+						 + String.format("%.ef", avg));
+
+	}
+
+	@Override
+	public void modify() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

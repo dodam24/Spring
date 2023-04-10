@@ -1,0 +1,22 @@
+package sample04;
+
+import java.util.List;
+import java.util.Scanner;
+
+import lombok.Setter;
+
+public class SungJukDelete implements SungJuk {
+	@Setter
+	private List<SungJukDTO2> list = null;
+	
+	@Override
+	public void execute() {
+		System.out.println();
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("삭제 할 이름 입력 : ");
+		String name = scan.next();
+		
+	}
+
+}

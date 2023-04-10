@@ -5,6 +5,14 @@
   <version>0.0.1-SNAPSHOT</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -15,48 +23,47 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-  <!-- SpringFramework -->
-  	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-context</artifactId>
-	    <version>5.3.23</version>
-	</dependency>
-	
-	<dependency>
-	    <groupId>org.springframework</groupId>
-	    <artifactId>spring-jdbc</artifactId>
-	    <version>5.3.23</version>
-	</dependency>
-	
-	<!-- Connection Pool -->
-	<dependency>
-	    <groupId>org.apache.commons</groupId>
-	    <artifactId>commons-collections4</artifactId>
-	    <version>4.4</version>
-	</dependency>
+  
+    <dependencies>
+    <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context</artifactId>
+         <version>5.3.23</version>
+   </dependency>
 
-	<dependency>
-	    <groupId>org.apache.commons</groupId>
-	    <artifactId>commons-dbcp2</artifactId>
-	    <version>2.9.0</version>
-	</dependency>
-	
-	<!-- Oracle -->
-	<dependency>
-	    <groupId>com.oracle.database.jdbc</groupId>
-	    <artifactId>ojdbc8</artifactId>
-	    <version>21.7.0.0</version>
-	</dependency>
-	
-	<!-- Lombok -->
-	<dependency>
-	    <groupId>org.projectlombok</groupId>
-	    <artifactId>lombok</artifactId>
-	    <version>1.18.24</version>
-	    <scope>provided</scope>
-	</dependency>
-	
-	
+   <!-- Connection Pool -->
+   <dependency>
+       <groupId>org.springframework</groupId>
+       <artifactId>spring-jdbc</artifactId>
+       <version>5.3.23</version>
+   </dependency>
+   
+   <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-collections4</artifactId>
+      <version>4.4</version>
+   </dependency>
+   
+   <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-dbcp2</artifactId>
+      <version>2.9.0</version>
+   </dependency>
+   
+   <!-- Oracle --> 
+     <dependency>
+       <groupId>com.oracle.database.jdbc</groupId>
+       <artifactId>ojdbc8</artifactId>
+       <version>21.7.0.0</version>
+   </dependency>
+        
+     <!-- Lombok -->
+   <dependency>
+       <groupId>org.projectlombok</groupId>
+       <artifactId>lombok</artifactId>
+       <version>1.18.24</version>
+       <scope>provided</scope>
+   </dependency>   
   </dependencies>
+  
 </project>

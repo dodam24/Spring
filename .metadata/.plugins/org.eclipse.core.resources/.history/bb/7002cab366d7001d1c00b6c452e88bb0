@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration 
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="user.bean.UserDTO" alias="user"/>
+	</typeAliases>
+	
+<!-- 
+	<mappers>
+		<mapper resource="user/dao/userMapper.xml" />
+	</mappers> -->
+</configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-<mappers>
+
+<!-- MyBatis에 연결될 mapper들의 위치를 설정. mapper는 여러개이므로 mappers임. -->
+
+
+<mapper resource="user/dao/userMapper.xml"/>
+
+<!-- myBatis에 연결될 mapper들의 위치정보를 설정 -->
+
+
+</mappers>
+
+</configuration>

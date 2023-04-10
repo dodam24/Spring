@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;spring.conf&apos; to &apos;chapter05_SpringMaven/src&apos;&#x0D;&#x0A;- Original project: &apos;chapter04_SpringMaven&apos;&#x0D;&#x0A;- Destination element: &apos;chapter05_SpringMaven/src&apos;&#x0D;&#x0A;- Original element: &apos;chapter04_SpringMaven/src/spring.conf&apos;" description="Copy package" destination="=chapter05_SpringMaven/src=/optional=/true=/=/maven.pomderived=/true=/" element1="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;spring.conf" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1681108685782" version="1.0"/>
+</session>

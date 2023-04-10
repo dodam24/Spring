@@ -1,0 +1,14 @@
+package user.main;
+
+public class HelloSpring {
+	
+	public void menu() {
+		
+	} //menu()
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

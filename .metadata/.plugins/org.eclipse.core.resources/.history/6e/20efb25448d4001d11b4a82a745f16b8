@@ -1,0 +1,50 @@
+package sample04;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpring { //클래스를 생성해야 menu() 함수 호출 가능
+
+	//menu() 작성 - 5번 입력할 때까지 무한루프
+	public void menu() {
+		Scanner scan = new Scanner(System.in);
+		int num;
+		
+		while(true) {
+			System.out.println();
+			System.out.println("**************");
+			System.out.println("   1. 입력");
+			System.out.println("   2. 출력");
+			System.out.println("   3. 수정");
+			System.out.println("   4. 삭제");
+			System.out.println("   5. 끝");
+			System.out.println("**************");
+			System.out.print("번호 입력 : ");
+			num = scan.nextInt();
+			if(num == 5) {
+				System.out.println("프로그램을 종료합니다.");
+				break;
+			}
+			if(num == 1) {
+				
+			}else if(num == 2) {
+			
+			}else if(num == 3 ) {
+			
+			}else if(num == 4) {
+			
+			}
+			
+		} //while
+	} //menu
+
+
+	public static void main(String[] args) {
+		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		List<SungJuk> sungJuk = (List<SungJuk>) context.getBean("sungJuk");
+	
+	}	
+}
