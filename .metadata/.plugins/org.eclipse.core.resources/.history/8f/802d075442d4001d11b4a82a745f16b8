@@ -1,9 +1,0 @@
-package sample04;
-
-public class SungJukInput implements SungJuk {
-	private SungJukDTO sungJukDTO = null;
-	
-	public void sungJukInput() {
-		
-	}
-}

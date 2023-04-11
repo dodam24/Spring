@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model>
-<aop-project name="chapter05"/>
-<aop-project name="chapter01"/>
-<aop-project name="chapter02"/>
-<aop-project name="chapter04"/>
-<aop-project name="chapter06"/>
-</aop-reference-model>

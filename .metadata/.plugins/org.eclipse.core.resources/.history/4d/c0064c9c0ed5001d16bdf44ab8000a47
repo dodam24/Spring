@@ -1,5 +1,0 @@
-package user.service;
-
-public interface userService {
-	public void execute(); //추상 메소드
-}
