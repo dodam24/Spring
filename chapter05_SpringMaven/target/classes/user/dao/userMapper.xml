@@ -10,7 +10,7 @@
  		<result column="PWD" property="pwd"></result>
  	</resultMap>
  	
- 	<insert id="write" parameterType="user">     <!-- 넘어온 변수들의 파일경로 --> <!-- user : Alias로 지정해준 경로임  -->
+ 	<insert id="insert" parameterType="user">     <!-- 넘어온 변수들의 파일경로 --> <!-- user : Alias로 지정해준 경로임  -->
  		insert into usertable values(#{name} , #{id} , #{pwd}) <!-- #{} , #{} 넘어온 dto변수들명들 -->
  	</insert>
  	<!-- 값 받아오는것을 UserDTO 에 담아! DAO에서 값을꺼내서 한줄한줄DTO에담기. -->
@@ -29,7 +29,7 @@
  		select * from usertable  
  	</select>
  	
- 	<select id="getUser" parameterType="String" resultMap="userResult">
+ 	<select id="UpdateUser" parameterType="String" resultMap="userResult">
  		select * from usertable where id=#{id}
  	</select>
  	
@@ -57,11 +57,8 @@
  			<otherwise>
  				id like '%' || #{value} || '%'
  			</otherwise>
- 		
  		</choose>
- 		 
- 		  
- 		
+	
  	</select>
  	
  	
@@ -69,9 +66,9 @@
  		update usertable set name=#{name}, pwd=#{pwd} where id=#{id}
  	</update>
  
- 	<delete id="delete" parameterType="String">
+ 	<delete id="deleteUser" parameterType="String">
   		delete from usertable where id=#{id}
-   </delete>  
+    </delete>  
  	
  	
  	

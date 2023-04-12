@@ -20,5 +20,5 @@
 	<mvc:annotation-driven />
 	
 	<mvc:resources location="/WEB-INF/image/" mapping="/image/**"></mvc:resources>
-	<mvc:resources location="/WEB-INF/js/" mapping="/write.js"></mvc:resources>
+	<mvc:resources location="/WEB-INF/js/" mapping="/js/**"></mvc:resources>
 </beans>

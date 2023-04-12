@@ -2,9 +2,21 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>chapter06</display-name>
   
+ <!-- 
+ WAC (Web Application Context)
+ - /WEB-INF/서블릿이름-servlet.xml
+ - /WEB-INF/dispatcherServlet-servlet.xml
+ --> 
+  
   <servlet>
   	<servlet-name>dispatcherServlet</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	
+  	<!-- 위치 또는 이름을 변경할 때 -->
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>dispatcherServlet</servlet-name>

@@ -5,4 +5,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
+<!-- <bean id="userServiceImpl" class="user.service.UserServiceImpl"></bean> -->
+	<context:component-scan base-package="user.dao" />
+	<context:component-scan base-package="user.service" /> <!-- bean대신 component 사용 -->
+	
+	<context:component-scan base-package="spring.conf" />
 </beans>
