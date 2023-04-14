@@ -22,6 +22,8 @@ public class SpringConfiguration {
 	private @Value("${jdbc.username}") String username;	
 	private @Value("${jdbc.password}") String password;
 	
+	
+	
 	@Bean
 	public BasicDataSource dataSource () {
 		BasicDataSource basicDataSource = new BasicDataSource();
@@ -58,3 +60,19 @@ public class SpringConfiguration {
 //SpringConfiguration은 일반 자바 파일이 아님
 //applicationContext.xml과 같은 환경설정 파일
 
+/*
+만약에 mapper.xml이 여러개일 경우
+
+1.
+sqlSessionFactoryBean.setMapperLocations(new ClassPathResource("user/dao/userMapper.xml"),
+										new ClassPathResource("member/dao/memberMapper.xml"),
+										new ClassPathResource("board/dao/boardMapper.xml"),
+										...);
+										
+2.
+필드
+@Autowired
+private ApplicationContext context;
+*/
+
+//sqlSessionFactoryBean.setMapperLocations(context.getResources("classpath:*/dao/*Mapper.xml")

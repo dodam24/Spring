@@ -41,4 +41,40 @@ $(function(){
 	});
 });
 
+//취소버튼
+$('#resetBtn').click(function(){
+	//강제 이벤트 발생 (trigger)
+	$('#searchIdBtn').trigger('click');
+	
+});
+
+//수정버튼
+$('#updateBtn').click(function(){
+	$('#nameDiv').empty();
+	$('#pwdDiv').empty();
+
+	if($('#name').val() == ''){
+		$('#nameDiv').text('이름을 입력하세요');
+		$('#name').focus();
+
+	}else if($('#pwd').val == ''){
+		$('#pwdDiv').text('비밀번호를 입력하세요');
+		$('#pwd').focus();
+		
+	}else{
+		$.ajax({
+			type: 'post',
+			url: '/chapter06_SpringWebMaven/user/update',
+			data: $('#updateForm').serialize(),
+				success: function(){ //반환받는 데이터 없음
+				alert("회원 정보를 수정하였습니다.");
+				location.href='/chapter06_SpringWebMaven/user/list';
+			},
+			error: function(err){
+				console.log(err);
+			}
+		});
+	}
+});
+
 

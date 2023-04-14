@@ -37,16 +37,18 @@
 				</td>
 			</tr>
 			<tr>
-				<th width="70">비밀번호</th>
+				<th>비밀번호</th>
 				<td>
 					<input type="password" name="pwd" id="pwd">
 					<div id="pwdDiv"></div>
 				</td>
 			</tr>
-			<td colspan="2" align="center">
-				<input type="button" value="수정" id="updateBtn">
-				<input type="reset" value="취소">
-			</td>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" value="수정" id="updateBtn">
+					<input type="reset" value="취소" id="resetBtn">
+				</td>
+			</tr>
 		</table>
 	</form>
 </div>

@@ -12,19 +12,25 @@
 
  	
  	<insert id="write" parameterType="user"> 
- 		insert into usertable values(#{name} , #{id} , #{pwd}) 
+ 		insert into usertable values(#{name}, #{id}, #{pwd}) 
  	</insert>
  
- 	 <select id ="getUserList" resultMap="userResult">
- 		select * from usertable  
+ 	 <select id ="getUserList" parameterType="java.util.Map" resultMap="userResult">
+ 		<![CDATA[
+	 		select * from
+			(select rownum rn, tt.* from
+			(select * from usertable) tt
+			) where rn>=#{startNum} and rn<=#{endNum}
+ 		]]>
  	</select>
  	
 	<select id="getUser" parameterType="String" resultType="user">
 		select * from usertable where id=#{id}
 	</select>
  	
- 	<select id="UpdateUser" parameterType="String" resultMap="userResult">
- 		select * from usertable where id=#{id}
+
+ 	<select id="update" parameterType="user">
+ 		update usertable set name=#{name}, pwd=#{pwd} where id=#{id}
  	</select>
  	
  	<select id="search" resultMap="userResult" parameterType="java.util.Map">
@@ -42,10 +48,14 @@
  		</choose>
  
  	</select>
+ 	
+ 		<!-- 총글수 -->
+	<select id="getTotalA" resultType="int">
+		select count(*) from usertable
+	</select>
  
- 	<delete id="deleteUser" parameterType="String">
-  		delete from usertable where id=#{id}
+ 	<delete id="delete" parameterType="String">
+  		delete usertable where id=#{id}
     </delete>  
 
- 	
  </mapper>
