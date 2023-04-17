@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import user.bean.UserDTO;
+import user.bean.UserImageDTO;
 import user.bean.UserPaging;
 import user.dao.UserDAO;
 
@@ -75,6 +76,16 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void delete(String id) {
 		userDAO.delete(id);	
+	}
+
+	@Override
+	public void upload(UserImageDTO userImageDTO, List<String> fileNameList) {
+		userDAO.upload(userImageDTO, fileNameList);
+	}
+
+	@Override
+	public List<UserImageDTO> getUploadForm_AJax_list() {
+		return userDAO.getUploadForm_AJax_list();
 	}
 
 }
